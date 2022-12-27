@@ -3,35 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: njerasea <njerasea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: njerasea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/07 13:52:57 by njerasea          #+#    #+#             */
-/*   Updated: 2022/12/16 20:46:37 by njerasea         ###   ########.fr       */
+/*   Created: 2022/12/27 13:23:27 by njerasea          #+#    #+#             */
+/*   Updated: 2022/12/27 15:58:36 by njerasea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../solong.h"
+#include "../so_long.h"
 
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*new;
-    int i;
-    int j;
-	int	len;
+	int		i;
+	int		j;
+	int		len;
 
 	if (!s2)
 		return (NULL);
-    i = 0;
-    j = 0;
+	i = 0;
+	j = 0;
 	len = ft_strlen_mo(s1, '\0');
 	new = malloc(sizeof(char) * (len + ft_strlen_mo(s2, '\0') + 1));
 	if (!new)
 		return (NULL);
 	while (len--)
-    {
+	{
 		new[i] = s1[i];
-        i++;
-    }
+		i++;
+	}
 	while (s2[j])
 		new[i++] = s2[j++];
 	new[i] = '\0';
@@ -53,7 +53,7 @@ char	*ft_strchr(char *s, int c)
 
 void	*ft_calloc(size_t count, size_t size)
 {
-    char	*s;
+	char	*s;
 	size_t	t;
 
 	if (count == SIZE_MAX || size == SIZE_MAX)
@@ -63,7 +63,7 @@ void	*ft_calloc(size_t count, size_t size)
 	if (!s)
 		return (NULL);
 	while (t--)
-        *s = '\0';
+		*s = '\0';
 	return (s);
 }
 

@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free2d.c                                        :+:      :+:    :+:   */
+/*   ft_printint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: njerasea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/27 13:25:48 by njerasea          #+#    #+#             */
-/*   Updated: 2022/12/27 15:58:44 by njerasea         ###   ########.fr       */
+/*   Created: 2022/12/27 13:27:50 by njerasea          #+#    #+#             */
+/*   Updated: 2022/12/27 15:58:47 by njerasea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-void	ft_free2d(char **str)
+void	ft_printint(int num)
 {
-	int	i;
+	const char	*str;
 
-	i = 0;
-	if (!str || !str[i])
-		return ;
-	while (str[i])
-		free(str[i++]);
-	free(str);
+	str = "0123456789";
+	if (num > 9)
+		ft_printint(num / 10);
+	write (1, &str[num % 10], 1);
 }

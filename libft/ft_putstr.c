@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: njerasea <njerasea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: njerasea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/27 15:44:27 by njerasea          #+#    #+#             */
-/*   Updated: 2022/11/27 16:39:08 by njerasea         ###   ########.fr       */
+/*   Created: 2022/12/27 13:28:35 by njerasea          #+#    #+#             */
+/*   Updated: 2022/12/27 15:58:50 by njerasea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../solong.h"
+#include "../so_long.h"
 
-void    ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (str[i])
-    {
-        write(1, &str[i], 1);
-        i++;
-    }
+	i = 0;
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
 }
