@@ -6,7 +6,7 @@
 /*   By: njerasea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 13:24:32 by njerasea          #+#    #+#             */
-/*   Updated: 2022/12/27 15:58:16 by njerasea         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:36:15 by njerasea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@ void	check_rectang(char **map)
 	t_kn	this;
 
 	this.i = ft_strlen_mo(map[0], '\n');
+	if (this.i == 0)
+	{
+		ft_putstr("Error : The map must not empty\n");
+		ft_free2d(map);
+		exit(0);
+	}
 	this.df = 1;
 	while (map[this.df] != NULL)
 	{
